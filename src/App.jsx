@@ -9,7 +9,7 @@ import { routingPage } from './component/Router/RouterPage'
 import SaffranStays from './component/SaffranStays'
 import Aos from 'aos'
 import "aos/dist/aos.css";
-import SmoothScroll from './SmoothScroll'
+
 
 import TentsContext from './component/AppContext/TentsContext'
 
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div>
 
-<SmoothScroll />
+
       <TentsContext>
         <RouterProvider router={routingPage}>
           <SaffranStays />

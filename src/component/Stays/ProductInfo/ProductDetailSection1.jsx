@@ -96,7 +96,7 @@ const ProductDetailSection1 = () => {
         try {
             let updatedBookmark = [...addBookmark];
             // const isBookmark = addBookmark.includes(val.stayType); // Check if already bookmarked
-            const isBookmark = addBookmark.some(bookmark => bookmark.id === val.id && bookmark.stayType === stayType);
+            const isBookmark = addBookmark.find(bookmark => bookmark.id === val.id && bookmark.stayType === stayType);
 
             if (isBookmark) {
                 // Remove from bookmark
@@ -328,7 +328,7 @@ const ProductDetailSection1 = () => {
                         sx={{ width: "50%", height: "8vh",  backgroundColor: theme === "dark" ? "white" : "black",color: theme === "dark" ? "black" : "white", display: "flex", gap: 2 }}
                     >
                         <BookmarkIcon
-                            className={`${addBookmark.includes(val?.stayType) ? "color-white" : "text-gray-400"} transition-colors duration-200`}
+                            className={`${addBookmark.includes(val) ? "color-white" : "text-gray-400"} transition-colors duration-200`}
                         /> bookmark</Button>
                 </Box>
 

@@ -74349,6 +74349,13 @@
       "email": "kunal@gmail.com",
       "contact": "9876543210",
       "password": "Kunal@123"
+    },
+    {
+      "id": "02f0",
+      "username": "kunal",
+      "email": "kunalsabale85@gmail.com",
+      "contact": "9762016975",
+      "password": "Kunal@123"
     }
   ],
   "admin": [
@@ -74359,220 +74366,7 @@
       "id": "a3a1"
     }
   ],
-  "bookmark": [
-    {
-      "id": "1",
-      "campName": "Whispering Woods Tents",
-      "type": "Adventure Tent",
-      "freeServices": [
-        "Free WiFi",
-        "Campfire Experience",
-        "Free Breakfast"
-      ],
-      "refundPolicy": "Partially Refundable",
-      "prices": {
-        "actual": 8932,
-        "afterDiscount": 7383
-      },
-      "roomsInACamp": [
-        {
-          "type": "Traditional Bamboo Hut",
-          "beds": "1 Double Bed with Local Handmade Sheets",
-          "capacity": "sleeps 2 guests comfortably"
-        }
-      ],
-      "about": {
-        "info": "Whispering Woods Tents offers a tranquil stay with scenic beauty in Aurangabad.",
-        "images": [
-          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/b3/ab/c0/tents-n-trails.jpg?w=1200&h=-1&s=1",
-          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/91/bb/tents-n-trails.jpg?w=1200&h=-1&s=1",
-          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/91/bb/tents-n-trails.jpg?w=1200&h=-1&s=1",
-          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/91/bb/tents-n-trails.jpg?w=1200&h=-1&s=1",
-          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/cd/ed/b7/caption.jpg?w=700&h=-1&s=1"
-        ]
-      },
-      "address": {
-        "landmark": "Landmark near Whispering Woods Tents",
-        "village": "Village near Mountain Bliss Camps",
-        "tal": "Borivali",
-        "dist": "Mumbai",
-        "location": "https://maps.app.goo.gl/De8X3rNNjhaCNu2N6"
-      },
-      "amenities": [
-        "Trekking",
-        "Bonfire",
-        "Yoga Sessions",
-        "Wildlife Safari"
-      ],
-      "propertyLayout": {
-        "roomOptions": [
-          {
-            "img": "https://www.hireacamp.com/api/external/image?name=uploads/d4d7f73bf29f4d3493dc06de9fec4455.jpeg&size=1080x1080&q=75",
-            "qty": 2,
-            "name": "Luxury Tent",
-            "beds": "1 Queen Bed",
-            "extra": "Garden View"
-          }
-        ],
-        "sharedOptions": [
-          {
-            "img": "https://www.hireacamp.com/api/external/image?name=uploads/d68525a5f23d42c3bb721bfde29cb0e5.jpeg&size=1080x1080&q=75",
-            "qty": 1,
-            "name": "Shared Bathroom",
-            "beds": "",
-            "extra": [
-              "Solar-heated water"
-            ]
-          }
-        ]
-      },
-      "foodDining": [
-        {
-          "isMealProvided": true,
-          "mealsOffered": [
-            "Authentic Maharashtrian Dinner",
-            "Breakfast",
-            "Snacks",
-            "Desserts",
-            "Evening Tea/Coffee"
-          ],
-          "veg": true,
-          "non-veg": false,
-          "isOutsideFoodAllowed": false
-        }
-      ],
-      "ratings": {
-        "location": 4.1,
-        "cleanliness": 3.9,
-        "valueForMoney": 3.7,
-        "food": 4.2,
-        "facilities": 3.9,
-        "checkInExperience": 4.7
-      },
-      "reviews": [
-        {
-          "custName": "Anita Roy",
-          "date": "10-7-2022",
-          "categoryUsed": "Deluxe Tent",
-          "review": "The staff were friendly, and the facilities were top-notch.",
-          "rating": 3,
-          "imgs": [
-            "https://www.hireacamp.com/api/external/image?name=uploads/f9150cbec75046cf9fdb09e2afa9c519.jpeg&size=1080x1080&q=75"
-          ]
-        },
-        {
-          "custName": "Rahul Verma",
-          "date": "2025-01-15",
-          "categoryUsed": "Luxury Tent",
-          "review": "Great value for money. Would love to visit again!",
-          "rating": 5
-        },
-        {
-          "custName": "Meera Joshi",
-          "date": "2025-01-15",
-          "categoryUsed": "Luxury Tent",
-          "review": "An unforgettable camping experience under the stars.",
-          "rating": 4
-        },
-        {
-          "custName": "Simran Kaur",
-          "date": "2025-01-15",
-          "categoryUsed": "Luxury Tent",
-          "review": "Perfect for a romantic getaway with a serene view.",
-          "rating": 5
-        }
-      ],
-      "info": "A serene spot known for its connection to nature at Mountain Bliss Camps.",
-      "activities": [
-        "Bird Watching",
-        "Star Gazing"
-      ],
-      "cancellationPolicy": "Non-refundable after booking.",
-      "specialPackages": [
-        {
-          "name": "Romantic Getaway",
-          "price": 1500
-        },
-        {
-          "name": "Family Adventure",
-          "price": 2000
-        },
-        {
-          "name": "Yoga Retreat",
-          "price": 1200
-        }
-      ],
-      "activitiesDetails": [
-        {
-          "name": "Star Gazing",
-          "difficulty": "Beginner",
-          "duration": "2 hours",
-          "price": 400
-        },
-        {
-          "name": "Nature Walk",
-          "difficulty": "Easy",
-          "duration": "1.5 hours",
-          "price": 200
-        }
-      ],
-      "dynamicPricing": {
-        "weekday": {
-          "actual": 8932,
-          "discounted": 7383
-        },
-        "weekend": {
-          "actual": 10718.4,
-          "discounted": 8859.6
-        },
-        "peakSeason": {
-          "actual": 13398,
-          "discounted": 11074.5
-        }
-      },
-      "localAttractions": [
-        {
-          "name": "Waterfall Trek",
-          "distance": "3 km",
-          "description": "A serene waterfall surrounded by lush greenery."
-        },
-        {
-          "name": "Historical Fort",
-          "distance": "10 km",
-          "description": "A fort with rich history and scenic views."
-        },
-        {
-          "name": "Wildlife Sanctuary",
-          "distance": "15 km",
-          "description": "Home to various exotic flora and fauna."
-        }
-      ],
-      "weather": {
-        "currentTemp": "28°C",
-        "forecast": [
-          "Sunny",
-          "Partly Cloudy",
-          "Rain"
-        ]
-      },
-      "transportation": {
-        "nearestAirport": "50 km",
-        "nearestRailwayStation": "20 km",
-        "shuttleService": true
-      },
-      "healthAndSafety": {
-        "emergencyContact": "+91-1234567890",
-        "firstAidAvailable": true,
-        "covidPrecautions": "Sanitized regularly, mask mandatory in common areas."
-      },
-      "uniqueFeatures": [
-        "Eco-friendly construction",
-        "Solar-powered amenities",
-        "Themed cultural evenings"
-      ],
-      "quantity": 1
-    }
-  ],
+  "bookmark": [],
   "cart": [
     {
       "id": "8",
@@ -74788,6 +74582,209 @@
         "Maharashtrian Cuisine",
         "Traditional Décor"
       ],
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "campName": "Valley Vista Apartments",
+      "type": "Family Suite",
+      "freeServices": [
+        "Free Welcome Drinks",
+        "Free WiFi"
+      ],
+      "refundPolicy": "Non-Refundable",
+      "prices": {
+        "actual": 9448,
+        "afterDiscount": 5280
+      },
+      "roomsInACamp": [
+        {
+          "type": "2 Bedrooms",
+          "beds": "1 Double Bed",
+          "capacity": "Sleeps 2 guests"
+        }
+      ],
+      "about": {
+        "info": "Valley Vista Apartments offers a perfect blend of luxury and comfort near popular tourist destinations in Maharashtra. Enjoy modern amenities, breathtaking views, and unparalleled hospitality.",
+        "images": [
+          "https://www.hireacamp.com/api/external/image?name=uploads/c4c4a2199972404a9e411dd79e37b3cc.jpg&size=2048x2048&q=75",
+          "https://www.hireacamp.com/api/external/image?name=uploads/ca1642000cd04e60b40c7cbdd6dda484.jpg&size=2048x2048&q=75",
+          "https://www.hireacamp.com/api/external/image?name=uploads/720127d5e010497aa538e7bf84b230ed.jpg&size=2048x2048&q=75",
+          "https://www.hireacamp.com/api/external/image?name=uploads/583cb471e15d4e6e93495e9d46f8b198.jpeg&size=2048x2048&q=75",
+          "https://www.hireacamp.com/api/external/image?name=uploads/9636c4c1a77045a2bfc2f04918db6aa0.jpg&size=2048x2048&q=75"
+        ]
+      },
+      "address": {
+        "village": "Village near Valley Vista Apartments",
+        "tal": "Taluka near Valley Vista Apartments",
+        "dist": "District near Valley Vista Apartments",
+        "location": "https://maps.app.goo.gl/Spot100Location",
+        "map": "<iframe src='https://www.google.com/maps/embed?pb=...' width='600' height='450' style='border:0;'></iframe>",
+        "landmark": "Near Pawna Dam, Spot 100"
+      },
+      "amenities": [
+        "Bonfire",
+        "Gym",
+        "Spa",
+        "Lawn"
+      ],
+      "propertyLayout": {
+        "RoomOptions": [
+          {
+            "img": "https://www.hireacamp.com/api/external/image?name=uploads/41e81097e9f64d89993174a2c439723c.jpg&size=2048x2048&q=75",
+            "qty": 5,
+            "name": "Deluxe Room",
+            "beds": "2 Queen Beds",
+            "extra": "Mountain View"
+          }
+        ],
+        "sharedOptions": [
+          {
+            "img": "https://www.hireacamp.com/api/external/image?name=uploads/5f4a0d4bcb464c35afd939273637a7b4.jpg&size=2048x2048&q=75",
+            "qty": 3,
+            "name": "Shared Lounge",
+            "beds": "",
+            "extra": []
+          }
+        ]
+      },
+      "foodDining": [
+        {
+          "isMealProvided": true,
+          "mealsOffered": [
+            "Dinner",
+            "Breakfast"
+          ],
+          "veg": true,
+          "non-veg": true,
+          "isOutsideFoodAllowed": "true"
+        }
+      ],
+      "ratings": {
+        "location": 4,
+        "cleanliness": 4.6,
+        "valueForMoney": 3.9,
+        "food": 3.9,
+        "facilities": 3.9,
+        "checkInExperience": 4
+      },
+      "reviews": [
+        {
+          "custName": "Rohan Deshmukh",
+          "date": "Sep 19, 2024",
+          "categoryUsed": "Luxury Apartment",
+          "review": "Amazing experience! The location was perfect for a relaxing stay.",
+          "rating": "4.0",
+          "imgs": [
+            "https://www.hireacamp.com/api/external/image?name=uploads/9a571e0efd8948019d4761a44f4f194f.jpg&size=2048x2048&q=75"
+          ]
+        },
+        {
+          "custName": "Sneha Jadhav",
+          "date": "Sep 18, 2024",
+          "categoryUsed": "Luxury Apartment",
+          "review": "Perfect getaway spot near the city.",
+          "rating": "4.3",
+          "imgs": [
+            "https://www.hireacamp.com/api/external/image?name=uploads/0198017f08f5434793a605a7ab78c9de.jpeg&size=2048x2048&q=75"
+          ]
+        },
+        {
+          "custName": "Sanjana Bhise",
+          "date": "Oct 17, 2024",
+          "categoryUsed": "Luxury Apartment",
+          "review": "Loved the amenities and the cleanliness of the property.",
+          "rating": "3.9",
+          "imgs": [
+            "https://www.hireacamp.com/api/external/image?name=uploads/71b18b4d64474e6bb0e262a5838f52cc.jpeg&size=2048x2048&q=75"
+          ]
+        },
+        {
+          "custName": "Neha Pawar",
+          "date": "Jul 31, 2024",
+          "categoryUsed": "Luxury Apartment",
+          "review": "A memorable stay with outstanding service.",
+          "rating": "4.7",
+          "imgs": [
+            "https://www.hireacamp.com/api/external/image?name=uploads/cef0f32131bd42ebb7839ad405d0fc6d.jpeg&size=2048x2048&q=75"
+          ]
+        }
+      ],
+      "cancellationPolicy": "Free cancellation up to 48 hours before check-in.",
+      "specialPackages": [
+        {
+          "name": "Monsoon Getaway",
+          "price": 3000
+        },
+        {
+          "name": "Cultural Maharashtra Tour",
+          "price": 5000
+        }
+      ],
+      "activitiesDetails": [
+        {
+          "name": "Trekking at Rajmachi Fort",
+          "difficulty": "Moderate",
+          "duration": "3 hours",
+          "price": 500
+        },
+        {
+          "name": "Boat Ride at Pawna Lake",
+          "difficulty": "Easy",
+          "duration": "1 hour",
+          "price": 300
+        }
+      ],
+      "dynamicPricing": {
+        "weekday": {
+          "actual": 9000,
+          "discounted": 7200
+        },
+        "weekend": {
+          "actual": 12000,
+          "discounted": 9600
+        },
+        "peakSeason": {
+          "actual": 15000,
+          "discounted": 12000
+        }
+      },
+      "localAttractions": [
+        {
+          "name": "Lonavala",
+          "distance": "10 km",
+          "description": "A popular hill station known for its scenic beauty."
+        },
+        {
+          "name": "Karla Caves",
+          "distance": "8 km",
+          "description": "Ancient Buddhist rock-cut caves."
+        }
+      ],
+      "weather": {
+        "currentTemp": "26°C",
+        "forecast": [
+          "Sunny",
+          "Cloudy",
+          "Light Rain"
+        ]
+      },
+      "transportation": {
+        "nearestAirport": "Pune Airport - 65 km",
+        "nearestRailwayStation": "Lonavala Railway Station - 12 km",
+        "shuttleService": true
+      },
+      "healthAndSafety": {
+        "emergencyContact": "+91-9876543210",
+        "firstAidAvailable": true,
+        "covidPrecautions": "Sanitized regularly, masks mandatory in common areas."
+      },
+      "uniqueFeatures": [
+        "Scenic Views",
+        "Maharashtrian Cuisine",
+        "Traditional Décor"
+      ],
+      "stayType": "apartments",
       "quantity": 1
     }
   ],
@@ -75242,6 +75239,80 @@
     {
       "id": "32",
       "type": "camps"
+    }
+  ],
+  "registrations": [
+    {
+      "date": "2025-02-01",
+      "count": 12
+    },
+    {
+      "date": "2025-02-02",
+      "count": 18
+    },
+    {
+      "date": "2025-02-03",
+      "count": 25
+    },
+    {
+      "date": "2025-02-04",
+      "count": 25
+    },
+    {
+      "date": "2025-02-05",
+      "count": 28
+    },
+    {
+      "date": "2025-02-06",
+      "count": 30
+    },
+    {
+      "date": "2025-02-07",
+      "count": 32
+    },
+    {
+      "date": "2025-02-08",
+      "count": 38
+    },
+    {
+      "date": "2025-02-09",
+      "count": 42
+    },
+    {
+      "date": "2025-02-10",
+      "count": 46
+    },
+    {
+      "date": "2025-02-11",
+      "count": 45
+    },
+    {
+      "date": "2025-02-12",
+      "count": 44
+    },
+    {
+      "date": "2025-02-13",
+      "count": 39
+    },
+    {
+      "date": "2025-02-14",
+      "count": 43
+    },
+    {
+      "date": "2025-02-15",
+      "count": 47
+    },
+    {
+      "date": "2025-02-16",
+      "count": 40
+    },
+    {
+      "date": "2025-02-17",
+      "count": 50
+    },
+    {
+      "date": "2025-02-18",
+      "count": 56
     }
   ]
 }

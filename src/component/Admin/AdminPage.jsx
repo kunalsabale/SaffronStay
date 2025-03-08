@@ -465,7 +465,7 @@ const AdminPage = () => {
                 <CardContent sx={{ flexGrow: 1, bgcolor: theme === 'dark' ? "#292A2D" : "", color: theme === 'dark' ? "white" : "" }}>
 
                     <Typography variant="body2" color="text.secondary" sx={{ color: theme == 'dark' ? "white" : "" }}>
-                        Click on the sidebar to view details.
+                        Click on the sidebar Stays to view details.
                     </Typography>
                 </CardContent>
             </Card>

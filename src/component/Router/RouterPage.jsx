@@ -1,14 +1,14 @@
 import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import LoadingBar from '../LoadingBar';
-import AdminPage from '../Admin/AdminPage';
+// import AdminPage from '../Admin/AdminPage';
 
 // Lazy loading components
 const SaffranStays = lazy(() => import('../SaffranStays'));
 const AllStays = lazy(() => import('../Stays/AllStays'));
 const SignUp = lazy(() => import('../Pages/SignUp'));
 const SignIn = lazy(() => import('../Pages/SignIn'));
-const Admin = lazy(() => import('../Admin/Admin'));
+const AdminPage = lazy(() => import('../Admin/AdminPage'));
 const PageNotFound = lazy(() => import('../Pages/PageNotFound'));
 const About = lazy(() => import('../Pages/About'));
 const ContactUs = lazy(() => import('../Pages/ContactUs'));
@@ -43,7 +43,7 @@ export let routingPage = createBrowserRouter([
     },
     { path: "/register", element: <SignUp /> },
     { path: "/login", element: <SignIn /> },
-    { path: "/admin-dash", element: <Admin /> },
+    // { path: "/admin-dash", element: <Admin /> },
     { path: "/admin-dash2", element: <AdminPage /> },
     {
         path: "*",

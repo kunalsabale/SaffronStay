@@ -107,7 +107,7 @@ const SignIn = () => {
                 dispatch({ type: "SET_ADMIN", value: true });
                 setIsAdminLoggedIn(true);
                 setUserDetails({ email, password, adminUser });
-                navigate("/admin-dash");
+                navigate("/admin-dash2");
             } else {
                 setIsLoggedIn(true);
                 setUserDetails({ email, password, user });
