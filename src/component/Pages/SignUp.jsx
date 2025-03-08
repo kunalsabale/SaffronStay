@@ -1,9 +1,19 @@
 import React, { useState, useReducer } from "react";
-import { TextField, Button, Box, Typography, IconButton, InputAdornment, Checkbox, FormControlLabel } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Box,
+  Typography,
+  IconButton,
+  InputAdornment,
+  Checkbox,
+  FormControlLabel,
+} from "@mui/material";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Login from "../../assets/Register/login.jpg";
+import Login1 from "../../assets/About/about4.jpg";
 import toast, { Toaster } from "react-hot-toast";
 
 const initialState = {
@@ -34,7 +44,9 @@ const formReducer = (state, action) => {
 const SignUp = () => {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const [showPassword, setShowPassword] = useState(false);
-  const [passwordMessage, setPasswordMessage] = useState("Password must be at least 6 characters long.");
+  const [passwordMessage, setPasswordMessage] = useState(
+    "Password must be at least 6 characters long."
+  );
   const [showPasswordTip, setShowPasswordTip] = useState(false);
   const navigate = useNavigate();
 
@@ -60,7 +72,10 @@ const SignUp = () => {
       return false;
     }
     if (state.username.length < 3) {
-      dispatch({ type: "SET_ERROR", value: "Username must be at least 3 characters long." });
+      dispatch({
+        type: "SET_ERROR",
+        value: "Username must be at least 3 characters long.",
+      });
       return false;
     }
     if (!/\S+@\S+\.\S+/.test(state.email)) {
@@ -68,15 +83,24 @@ const SignUp = () => {
       return false;
     }
     if (state.password.length < 6) {
-      dispatch({ type: "SET_ERROR", value: "Password must be at least 6 characters long." });
+      dispatch({
+        type: "SET_ERROR",
+        value: "Password must be at least 6 characters long.",
+      });
       return false;
     }
     if (!/^\d{10}$/.test(state.contact)) {
-      dispatch({ type: "SET_ERROR", value: "Contact number must be exactly 10 digits." });
+      dispatch({
+        type: "SET_ERROR",
+        value: "Contact number must be exactly 10 digits.",
+      });
       return false;
     }
     if (!state.isChecked) {
-      dispatch({ type: "SET_ERROR", value: "You must agree to the Terms & Conditions." });
+      dispatch({
+        type: "SET_ERROR",
+        value: "You must agree to the Terms & Conditions.",
+      });
       return false;
     }
     return true;
@@ -85,28 +109,38 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-    
+
     const data = {
       username: state.username,
       email: state.email,
       contact: state.contact,
       password: state.password,
     };
-    
+
     try {
-      const existingUser = await axios.get(`http://localhost:5000/users?email=${state.email}`);
+      const existingUser = await axios.get(
+        `http://localhost:5000/users?email=${state.email}`
+      );
       if (existingUser.data.length > 0) {
-        dispatch({ type: "SET_ERROR", value: "User with this email already exists!" });
+        dispatch({
+          type: "SET_ERROR",
+          value: "User with this email already exists!",
+        });
         return;
       }
-      
-      await axios.post("http://localhost:5000/users", data, { headers: { "Content-Type": "application/json" } });
+
+      await axios.post("http://localhost:5000/users", data, {
+        headers: { "Content-Type": "application/json" },
+      });
       dispatch({ type: "SET_SUCCESS", value: "Sign up successful!" });
-      toast.success("Sign Up successful!",{duration: 2000});
+      toast.success("Sign Up successful!", { duration: 2000 });
       setTimeout(() => navigate("/login"), 2000);
     } catch (error) {
       console.error("Signup error:", error);
-      dispatch({ type: "SET_ERROR", value: "Signup failed! Please try again." });
+      dispatch({
+        type: "SET_ERROR",
+        value: "Signup failed! Please try again.",
+      });
     }
   };
 
@@ -124,119 +158,159 @@ const SignUp = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Box sx={{ width: { xs: "90%", sm: "60%", md: "40%" }, p: 3, bgcolor: "white", opacity: 0.8, boxShadow: 3, borderRadius: 3 }}>
-        <Typography variant="h6" sx={{ textAlign: "center", mb: 1, fontWeight: "bold" }}>Sign Up</Typography>
-        <Typography variant="h5" sx={{ textAlign: "center", mb: 1, fontWeight: "bold" }}>Welcome To SaffronStays</Typography>
-        <Typography variant="body2" sx={{ textAlign: "center", mb: 2, fontWeight: "" }}>Sign up for exclusive offers</Typography>
-        {state.error && <Typography color="error" sx={{ textAlign: "center" }}>{state.error}</Typography>}
-        {state.success && <Typography color="success.main" sx={{ textAlign: "center" }}>{state.success}</Typography>}
-        <form onSubmit={handleSubmit}>
-          <TextField label="Username" name="username" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={(e) => handleChange("username", e.target.value)} />
-          <TextField label="Email" name="email" type="email" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={(e) => handleChange("email", e.target.value)} />
-          <TextField label="Contact" name="contact" type="tel" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={(e) => handleChange("contact", e.target.value)} />
-          <TextField label="Password" name="password" type={showPassword ? "text" : "password"} variant="outlined" fullWidth sx={{ mb: 2 }} onChange={(e) => handlePasswordChange(e.target.value)} InputProps={{ endAdornment: <InputAdornment position="end"><IconButton onClick={() => setShowPassword(!showPassword)}>{showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}</IconButton></InputAdornment> }} />
-          {showPasswordTip && <Typography sx={{ fontSize: "12px", color: "gray" }}>{passwordMessage}</Typography>}
-          <FormControlLabel  sx={{display:"flex",justifyContent:"center" ,alignItems:"center"}} control={<Checkbox checked={state.isChecked} onChange={() => dispatch({ type: "TOGGLE_CHECKBOX" })} />} label="I agree to the Terms & Conditions" />
-          <Button type="submit" variant="contained" fullWidth sx={{ bgcolor: "#464646", color: "white", p: 1.5,  "&:hover": { bgcolor: "#202020" } }}>Sign Up</Button>
-          <Typography sx={{ textAlign: "center", mt: 2 }}>Already a member? <Link to="/login"><Typography variant="p" sx={{color:"#38BCF8"}}>Sign In</Typography></Link></Typography>
-        </form>
+      <Box
+        sx={{
+          width: { xs: "90%", sm: "80%", md: "80%" },
+          height: "80%",
+          display: "flex",
+          bgcolor: "white",
+          opacity: 0.8,
+          boxShadow: 3,
+          borderRadius: 3,
+          overflow: "hidden",
+        }}
+      >
+        {/* Left Section - Welcome Message or Image */}
+        <Box
+          sx={{
+            width: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Login1})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            p: 3,
+          }}
+        >
+          <Typography variant="h4" sx={{ fontWeight: "bold", color: "white" }}>
+            Welcome to SaffronStays
+          </Typography>
+        </Box>
+
+        {/* Right Section - Sign Up Form */}
+        <Box
+          sx={{
+            width: "50%",
+            p: 3,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            variant="h6"
+            sx={{ textAlign: "center", mb: 1, fontWeight: "bold" }}
+          >
+            Sign Up
+          </Typography>
+          <Typography variant="body2" sx={{ textAlign: "center", mb: 2 }}>
+            Sign up for exclusive offers
+          </Typography>
+          {state.error && (
+            <Typography color="error" sx={{ textAlign: "center" }}>
+              {state.error}
+            </Typography>
+          )}
+          {state.success && (
+            <Typography color="success.main" sx={{ textAlign: "center" }}>
+              {state.success}
+            </Typography>
+          )}
+          <form onSubmit={handleSubmit}>
+            <TextField
+              label="Username"
+              name="username"
+              variant="outlined"
+              fullWidth
+              sx={{ mb: 2 }}
+              onChange={(e) => handleChange("username", e.target.value)}
+            />
+            <TextField
+              label="Email"
+              name="email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              sx={{ mb: 2 }}
+              onChange={(e) => handleChange("email", e.target.value)}
+            />
+            <TextField
+              label="Contact"
+              name="contact"
+              type="tel"
+              variant="outlined"
+              fullWidth
+              sx={{ mb: 2 }}
+              onChange={(e) => handleChange("contact", e.target.value)}
+            />
+            <TextField
+              label="Password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              variant="outlined"
+              fullWidth
+              sx={{ mb: 2 }}
+              onChange={(e) => handlePasswordChange(e.target.value)}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? (
+                        <AiOutlineEye />
+                      ) : (
+                        <AiOutlineEyeInvisible />
+                      )}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+            {showPasswordTip && (
+              <Typography sx={{ fontSize: "12px", color: "gray" }}>
+                {passwordMessage}
+              </Typography>
+            )}
+            <FormControlLabel
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              control={
+                <Checkbox
+                  checked={state.isChecked}
+                  onChange={() => dispatch({ type: "TOGGLE_CHECKBOX" })}
+                />
+              }
+              label="I agree to the Terms & Conditions"
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              fullWidth
+              sx={{
+                bgcolor: "#464646",
+                color: "white",
+                p: 1.5,
+                "&:hover": { bgcolor: "#202020" },
+              }}
+            >
+              Sign Up
+            </Button>
+            <Typography sx={{ textAlign: "center", mt: 2 }}>
+              Already a member?{" "}
+              <Link to="/login">
+                <Typography variant="p" sx={{ color: "#38BCF8" }}>
+                  Sign In
+                </Typography>
+              </Link>
+            </Typography>
+          </form>
+        </Box>
       </Box>
     </Box>
   );
 };
 export default SignUp;
-
-
-
-// import React, { useState } from "react";
-// import { TextField, Button, Box, Typography, IconButton, InputAdornment } from "@mui/material";
-// import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-// import { Link } from "react-router-dom";
-// import Login from "../../assets/Register/login.jpg";
-
-// const SignUp = () => {
-//   const [showPassword, setShowPassword] = useState(false);
-
-//   const [formData, setFormData] = useState({
-//     username: "",
-//     email: "",
-//     contact: "",
-//     password: "",
-//   });
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log("Form Data:", formData);
-//   };
-
-//   return (
-//     <Box
-//       sx={{
-//         width: "100%",
-//         height: "100vh",
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Login})`,
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundRepeat: "no-repeat",
-//       }}
-//     >
-//       <Box
-//         sx={{
-//           width: { xs: "90%", sm: "60%", md: "40%" },
-//           p: 3,
-//           bgcolor: "white",
-//           opacity: 0.9,
-//           boxShadow: 3,
-//           borderRadius: 3,
-//         }}
-//       >
-//         <Typography variant="h5" sx={{ textAlign: "center", mb: 2, fontWeight: "bold" }}>
-//           Sign Up
-//         </Typography>
-
-//         <form onSubmit={handleSubmit}>
-//           <TextField label="Username" name="username" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={handleChange} />
-//           <TextField label="Email" name="email" type="email" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={handleChange} />
-//           <TextField label="Contact" name="contact" type="tel" variant="outlined" fullWidth sx={{ mb: 2 }} onChange={handleChange} />
-
-//           {/* Password Field with Show/Hide Toggle */}
-//           <TextField
-//             label="Password"
-//             name="password"
-//             type={showPassword ? "text" : "password"} // Toggle Type
-//             variant="outlined"
-//             fullWidth
-//             sx={{ mb: 3 }}
-//             onChange={handleChange}
-//             InputProps={{
-//               endAdornment: (
-//                 <InputAdornment position="end">
-//                   <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
-//                     {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
-//                   </IconButton>
-//                 </InputAdornment>
-//               ),
-//             }}
-//           />
-
-//           <Button type="submit" variant="contained" fullWidth sx={{ bgcolor: "#464646", color: "white", p: 1.5 }}>
-//             Sign Up
-//           </Button>
-
-//           <Typography sx={{ textAlign: "center", mt: 2 }}>
-//             Already a member? <Link to="/login">Sign In</Link>
-//           </Typography>
-//         </form>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default SignUp;

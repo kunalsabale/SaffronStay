@@ -135,7 +135,7 @@ const SignIn = () => {
             <Paper
                 sx={{
                     width: { xs: "90%", sm: "80%", md: "90%" },
-                    maxWidth: 1000,
+                    maxWidth: 1400,
                     display: "flex",
                     borderRadius: 3,
                     overflow: "hidden",

@@ -1,19 +1,17 @@
-
 import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import LoadingBar from '../LoadingBar';
-
+import AdminPage from '../Admin/AdminPage';
 
 // Lazy loading components
 const SaffranStays = lazy(() => import('../SaffranStays'));
-const Demo = lazy(() => import('../Demo'));
 const AllStays = lazy(() => import('../Stays/AllStays'));
 const SignUp = lazy(() => import('../Pages/SignUp'));
 const SignIn = lazy(() => import('../Pages/SignIn'));
 const Admin = lazy(() => import('../Admin/Admin'));
 const PageNotFound = lazy(() => import('../Pages/PageNotFound'));
 const About = lazy(() => import('../Pages/About'));
-const ContactUs= lazy(() => import('../Pages/ContactUs'));
+const ContactUs = lazy(() => import('../Pages/ContactUs'));
 const ProductDetails = lazy(() => import('../Stays/ProductInfo/ProductDetails'));
 const BookmarkPage = lazy(() => import('../CartAndBookmark/BookmarkPage'));
 const CartPage = lazy(() => import('../CartAndBookmark/CartPage'));
@@ -31,7 +29,6 @@ export let routingPage = createBrowserRouter([
             </Suspense>
         ),
         children: [
-            { path: "demo", element: <Demo /> },
             { path: "stays", element: <AllStays /> },
             { path: "bookmark", element: <BookmarkPage /> },
             { path: "cart", element: <CartPage /> },
@@ -47,6 +44,7 @@ export let routingPage = createBrowserRouter([
     { path: "/register", element: <SignUp /> },
     { path: "/login", element: <SignIn /> },
     { path: "/admin-dash", element: <Admin /> },
+    { path: "/admin-dash2", element: <AdminPage /> },
     {
         path: "*",
         element: (
