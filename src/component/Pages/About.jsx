@@ -3,7 +3,7 @@ import { Container, Typography, Grid, Box, Card, CardContent, CardMedia, Button,
 import { Facebook, Twitter, Instagram, LinkedIn, LocationOn, Phone, Email, ArrowDownward } from "@mui/icons-material";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AboutHero from "../../assets/About/about.jpg";
+import AboutHero from "../../assets/About/about4.jpg";
 // import AboutHero from "../../assets/About/about3.jpg";
 import toursImg from "../../assets/Hero/toursHero1.jpg";
 import Tent from '../../assets/About/tent.webp'
@@ -19,7 +19,7 @@ import CEO from '../../assets/About/prasad-sir.jpg'
 import HOD from '../../assets/About/arvind-sir.jpg'
 import EMP from '../../assets/About/anna.jpg'
 import Founder from '../../assets/About/kedar-sir.jpg'
-import Hero from '../../assets/HomePage/houseImg.jpg'
+import Hero from '../../assets/HomePage/aboutus.jpg'
 import Aos from "aos";
 
 const About = () => {
